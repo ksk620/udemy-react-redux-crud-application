@@ -19,9 +19,11 @@ class Counter extends Component {
   render() {
     return (
       <React.Fragment>
-        <div>count: { this.state.count }</div>
-        <button onClick={ this.handlePlusButton }>+1</button>
-        <button onClick={ this.handleMinusButton }>-1</button>
+        <div className="wrapper">
+          <div className="main-content">count: { this.state.count }</div>
+          <button className="button-plus" onClick={ this.handlePlusButton }>+1</button>
+          <button className="button-minus" onClick={ this.handleMinusButton }>-1</button>
+        </div>
       </React.Fragment>
     )
   }
