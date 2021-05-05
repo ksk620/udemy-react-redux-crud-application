@@ -4,7 +4,9 @@ import { INCREMENT, DECREMENT } from '../actions'
 // カウンターの初期値を設定
 const initialState = { value: 0 }
 
-export default (state = initialState, action) => {
+const switchEvents = (state = initialState, action) => {
+    //console.log(action)
+    //console.log(state)
   switch (action.type) {
     case INCREMENT:
         return { value: state.value + 1 }
@@ -14,3 +16,5 @@ export default (state = initialState, action) => {
         return state
   }
 }
+
+export default switchEvents;
